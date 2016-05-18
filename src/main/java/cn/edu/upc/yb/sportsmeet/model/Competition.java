@@ -1,11 +1,19 @@
 package cn.edu.upc.yb.sportsmeet.model;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 /**
  * Created by wanghaojun on 2016/5/18.
  */
 public class Competition {
-    private String name;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+
+    private String name;
     private String[] studentnumber = new String[8];
     private String[] studentname = new String[8];
     private String[] studentmark = new String[8];
