@@ -13,13 +13,13 @@ public class Competition {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
-    private String name;
+    private String sportname;
     private String[] studentnumber = new String[8];
     private String[] studentname = new String[8];
     private String[] studentmark = new String[8];
 
     public String getName() {
-        return name;
+        return sportname;
     }
 
     public int getId() {
@@ -35,7 +35,7 @@ public class Competition {
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.sportname = name;
     }
 
     public void setId(int id) {
@@ -56,5 +56,12 @@ public class Competition {
 
     public String[] getStudentmark() {
         return studentmark;
+    }
+
+    public Competition(String sportname,String[] studentnumber,String[] studentname,String[] studentmark){
+        this.sportname = sportname;
+        this.studentnumber = studentnumber;
+        this.studentname = studentname;
+        this.studentmark = studentmark;
     }
 }

@@ -12,7 +12,8 @@ public class InsertController {
 
     @RequestMapping("/insert")
     public String InsertDate(String competition,String[] student,String[] studentname,String[] studentmark){
-        Competition people = new Competition();
+        Competition people = new Competition(competition,student[8],studentname[8],studentmark[]);
+
 
     }
 }
