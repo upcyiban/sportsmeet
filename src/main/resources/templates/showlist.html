@@ -1,21 +1,97 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html class="no-js" lang="zh" xmlns="http://www.w3.org/1/xhtml" xmlns:th="http://www.thymeleaf.org">>
 <head>
-    <meta charset="UTF-8"/>
-    <title>Title</title>
+    <meta charset="utf-8"/>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>sport</title>
+
+    <link rel="apple-touch-icon" href="/apple-touch-icon.jpg"/>
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="/styles/vendor.css"/>
+
+    <link rel="stylesheet" href="/styles/main.css"/>
+
+    <script src="/scripts/vendor/modernizr.js"></script>
+
 </head>
 <body>
+<!--[if lt IE 10]>
+<![endif]-->
+<div class="container">
+    <div class="jumbotron">
+        <h1>石油大学运动会</h1>
+        <p class="lead">2016.05</p>
+    </div>
+    <div class="table-responsive">
+        <table class="table">
+            <thead class="table-striped">
+            <tr th:each="list:${lists}">
+                <td class="lead">项目名称：</td>
+                <td th:text="${list.sportname}">800米</td>
+            </tr>
+            </thead>
+            <tbody class="table-striped">
+            <tr class="lead">
+                <td>姓名</td>
+                <td>成绩</td>
+            </tr>
+            <tr style="font-family: Courier;font-size: medium" th:each="list:${lists}">
+                <td th:text="${list.studentname1}">姓名</td>
+                <td th:text="${list.studentgrade1}">成绩</td>
+            </tr>
+            <tr style="font-family: Courier;font-size: medium" th:each="list:${lists}">
+                <td th:text="${list.studentname2}">姓名</td>
+                <td th:text="${list.studentgrade2}">成绩</td>
+            </tr>
+            <tr style="font-family: Courier;font-size: medium" th:each="list:${lists}">
+                <td th:text="${list.studentname3}">姓名</td>
+                <td th:text="${list.studentgrade3}">成绩</td>
+            </tr>
+            <tr style="font-family: Courier;font-size: medium" th:each="list:${lists}">
+                <td th:text="${list.studentname4}">姓名</td>
+                <td th:text="${list.studentgrade4}">成绩</td>
+            </tr>
+            <tr style="font-family: Courier;font-size: medium" th:each="list:${lists}">
+                <td th:text="${list.studentname5}">姓名</td>
+                <td th:text="${list.studentgrade5}">成绩</td>
+            </tr>
+            <tr style="font-family: Courier;font-size: medium" th:each="list:${lists}">
+                <td th:text="${list.studentname6}">姓名</td>
+                <td th:text="${list.studentgrade6}">成绩</td>
+            </tr>
+            <tr style="font-family: Courier;font-size: medium" th:each="list:${lists}">
+                <td th:text="${list.studentname7}">姓名</td>
+                <td th:text="${list.studentgrade7}">成绩</td>
+            </tr>
+            <tr style="font-family: Courier;font-size: medium" th:each="list:${lists}">
+                <td th:text="${list.studentname8}">姓名</td>
+                <td th:text="${list.studentgrade8}">成绩</td>
+            </tr>
 
-<ul th:each="list:${lists}">
-    <li><span th:text="${list.studentname1}"></span> <span th:text="${list.studentgrade1}"></span></li>
-    <li><span th:text="${list.studentname2}"></span> <span th:text="${list.studentgrade2}"></span></li>
-    <li><span th:text="${list.studentname3}"></span> <span th:text="${list.studentgrade3}"></span></li>
-    <li><span th:text="${list.studentname4}"></span> <span th:text="${list.studentgrade4}"></span></li>
-    <li><span th:text="${list.studentname5}"></span> <span th:text="${list.studentgrade5}"></span></li>
-    <li><span th:text="${list.studentname6}"></span> <span th:text="${list.studentgrade6}"></span></li>
-    <li><span th:text="${list.studentname7}"></span> <span th:text="${list.studentgrade7}"></span></li>
-    <li><span th:text="${list.studentname8}"></span> <span th:text="${list.studentgrade8}"></span></li>
 
-</ul>
+            </tbody>
+        </table>
+        <a type="button" class="btn btn-info btn-block" onclick="window.history.back()">返回</a>
+    </div>
+</div>
+
+<div class="footer container">
+    <p class="text-center">易班技术部</p>
+</div>
+<!-- Baidu Analytics -->
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?dcee5a8ae712222e23ba82eaad3f35c9";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script src="/scripts/vendor.js"></script>
+<script src="/scripts/plugins.js"></script>
+<script src="/scripts/main.js"></script>
 </body>
 </html>

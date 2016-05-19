@@ -17,24 +17,28 @@ public class ListController {
     private CompetitionDao competitionDao;
 
     @RequestMapping("/list")
-    public String list(Model model){
-        Iterable<Competition> competitions=competitionDao.findAll(sortById());
-        model.addAttribute("lists",competitions);
+    public String list(Model model) {
+        Iterable<Competition> competitions = competitionDao.findAll(sortById());
+        model.addAttribute("lists", competitions);
         return "list";
 
     }
 
-    private Sort sortById(){
-        return new Sort(Sort.Direction.DESC,"id");
+    private Sort sortById() {
+        return new Sort(Sort.Direction.DESC, "id");
     }
+
     @RequestMapping("/showlist")
-    public String showList(int id,Model model){
+    public String showList(int id, Model model) {
         Competition competition = competitionDao.findOne(id);
-        model.addAttribute("lists",competition);
+        model.addAttribute("lists", competition);
         return "showlist";
-
-
     }
+
+//    @RequestMapping("/return")
+//    public String returnList(){
+//        return "list";
+//    }
 
 
 }
