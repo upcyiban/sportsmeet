@@ -27,16 +27,16 @@
     <button>插入</button>
     <table>
         <thead>
-        <th>id</th>
-        <th>项目</th>
-        <th>删除</th>
+            <th>id</th>
+            <th>项目</th>
+            <th>删除</th>
         </thead>
         <tbody>
-        <tr th:each="list:${lists}">
-            <td th:text="${list.id}">01</td>
-            <td th:text="${list.sportname}">800</td>
-            <td><a href="#" th:href="@{/delet(id=${list.id})}">删除</a></td>
-        </tr>
+            <tr th:each="list:${lists}">
+                <td th:text="${list.id}">01</td>
+                <td th:text="${list.sportname}">800</td>
+                <td><a href="#" th:href="@{/delet(id=${list.id})}">删除</a></td>
+            </tr>
         </tbody>
 
     </table>
