@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
- * Created by 易班技术开发部 on 2016/5/18.
+ * Created by yyljj on 2016/5/18.
  */
 @Controller
 public class InsertController {
