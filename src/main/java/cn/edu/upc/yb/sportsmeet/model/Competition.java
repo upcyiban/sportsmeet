@@ -51,6 +51,7 @@ public class Competition {
         this.studentname8 = studentname8;
         this.studentgrade8 = studentgrade8;
     }
+    public Competition(){}
 
     public int getId() {
         return id;

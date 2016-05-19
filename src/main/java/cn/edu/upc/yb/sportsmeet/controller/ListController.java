@@ -16,7 +16,7 @@ public class ListController {
     private CompetitionDao competitionDao;
 
     @RequestMapping("/list")
-    public String listDate(Model model){
+    public String list(Model model){
 
 
 
