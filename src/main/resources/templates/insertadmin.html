@@ -1,45 +1,75 @@
-<!DOCTYPE html>
+<!--Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
 <html lang="en" xmlns="http://www.w3.org/1/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8"/>
-    <title>Title</title>
+    <title>中国石油大学运动会成绩录入</title>
+    <!-- Custom Theme files -->
+    <link href="/css/style.css" rel="stylesheet" type="text/css" media="all"/>
+    <!-- Custom Theme files -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+
 </head>
 <body>
-<form action="/insert" method="post">
-    项目:<input type="text" name="sportname"/><br/><br/>
+<!--contact page start here-->
+<h1>成绩录入</h1>
 
-    姓名:<input type="text" name="studentname1"/><br/>
-    成绩:<input type="text" name="studentgrade1"/><br/>
-    姓名:<input type="text" name="studentname2"/><br/>
-    成绩:<input type="text" name="studentgrade2"/><br/>
-    姓名:<input type="text" name="studentname3"/><br/>
-    成绩:<input type="text" name="studentgrade3"/><br/>
-    姓名:<input type="text" name="studentname4"/><br/>
-    成绩:<input type="text" name="studentgrade4"/><br/>
-    姓名:<input type="text" name="studentname5"/><br/>
-    成绩:<input type="text" name="studentgrade5"/><br/>
-    姓名:<input type="text" name="studentname6"/><br/>
-    成绩:<input type="text" name="studentgrade6"/><br/>
-    姓名:<input type="text" name="studentname7"/><br/>
-    成绩:<input type="text" name="studentgrade7"/><br/>
-    姓名:<input type="text" name="studentname8"/><br/>
-    成绩:<input type="text" name="studentgrade8"/><br/>
-    <button>插入</button>
-    <table>
-        <thead>
-            <th>id</th>
-            <th>项目</th>
-            <th>删除</th>
-        </thead>
-        <tbody>
-            <tr th:each="list:${lists}">
-                <td th:text="${list.id}">01</td>
-                <td th:text="${list.sportname}">800</td>
-                <td><a href="#" th:href="@{/delet(id=${list.id})}">删除</a></td>
+<div class="contact">
+
+    <form action="/insert" method="post">
+        项目:<input type="text" name="sportname"/><br/><br/>
+
+        <h3>第一名</h3>姓名:<input type="text" name="studentname1"/><br/>
+        成绩:<input type="text" name="studentgrade1"/><br/>
+        <h3>第二名</h3>姓名:<input type="text" name="studentname2"/><br/>
+        成绩:<input type="text" name="studentgrade2"/><br/>
+        <h3>第三名</h3>姓名:<input type="text" name="studentname3"/><br/>
+        成绩:<input type="text" name="studentgrade3"/><br/>
+        <h3>第四名</h3>姓名:<input type="text" name="studentname4"/><br/>
+        成绩:<input type="text" name="studentgrade4"/><br/>
+        <h3>第五名</h3>姓名:<input type="text" name="studentname5"/><br/>
+        成绩:<input type="text" name="studentgrade5"/><br/>
+        <h3>第六名</h3>姓名:<input type="text" name="studentname6"/><br/>
+        成绩:<input type="text" name="studentgrade6"/><br/>
+        <h3>第七名</h3>姓名:<input type="text" name="studentname7"/><br/>
+        成绩:<input type="text" name="studentgrade7"/><br/>
+        <h3>第八名</h3>姓名:<input type="text" name="studentname8"/><br/>
+        成绩:<input type="text" name="studentgrade8"/><br/>
+        <input type="submit" value="提交"/>
+
+
+    </form>
+    <div align="center">
+        <table>
+            <thead>
+            <th class="font">id</th>
+            <th class="font">项目</th>
+            <th class="font">删除</th>
+            </thead>
+            <tbody>
+            <tr th:each="list:${lists}" class="font">
+                <td th:text="${list.id}" class="font">01</td>
+                <td th:text="${list.sportname}" class="font">800</td>
+                <td><a href="#" th:href="@{/delet(id=${list.id})}" class="font">删除</a></td>
             </tr>
-        </tbody>
+            </tbody>
 
-    </table>
-</form>
+        </table>
+    </div>
+</div>
+
+
+
+
+<footer class="copyright">
+    <p> Powered By<a href="http://yb.upc.edu.cn">易班发展中心 </a></p>
+</footer>
+<!--contact page end here-->
 </body>
 </html>
