@@ -17,7 +17,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 </head>
 <body>
-<<<<<<< HEAD
 <form action="/insert" method="post">
     项目:<input type="text" name="sportname"/><br/><br/>
 
@@ -50,66 +49,56 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <td th:text="${list.id}">01</td>
                 <td th:text="${list.sportname}">800</td>
                 <td><a href="#" th:href="@{/delet(id=${list.id})}">删除</a></td>
-=======
-<!--contact page start here-->
-<h1>成绩录入</h1>
-
-<div class="contact">
-
-    <form action="/insert" method="post">
-        项目:<input type="text" name="sportname"/><br/><br/>
-
-        <h3>第一名</h3>姓名:<input type="text" name="studentname1"/><br/>
-        成绩:<input type="text" name="studentgrade1"/><br/>
-        <h3>第二名</h3>姓名:<input type="text" name="studentname2"/><br/>
-        成绩:<input type="text" name="studentgrade2"/><br/>
-        <h3>第三名</h3>姓名:<input type="text" name="studentname3"/><br/>
-        成绩:<input type="text" name="studentgrade3"/><br/>
-        <h3>第四名</h3>姓名:<input type="text" name="studentname4"/><br/>
-        成绩:<input type="text" name="studentgrade4"/><br/>
-        <h3>第五名</h3>姓名:<input type="text" name="studentname5"/><br/>
-        成绩:<input type="text" name="studentgrade5"/><br/>
-        <h3>第六名</h3>姓名:<input type="text" name="studentname6"/><br/>
-        成绩:<input type="text" name="studentgrade6"/><br/>
-        <h3>第七名</h3>姓名:<input type="text" name="studentname7"/><br/>
-        成绩:<input type="text" name="studentgrade7"/><br/>
-        <h3>第八名</h3>姓名:<input type="text" name="studentname8"/><br/>
-        成绩:<input type="text" name="studentgrade8"/><br/>
-        <input type="submit" value="提交"/>
-
-
-    </form>
-    <div align="center">
-        <table>
-            <thead>
-            <th class="font">id</th>
-            <th class="font">项目</th>
-            <th class="font">删除</th>
-            </thead>
-            <tbody>
-            <tr th:each="list:${lists}" class="font">
-                <td th:text="${list.id}" class="font">01</td>
-                <td th:text="${list.sportname}" class="font">800</td>
-                <td><a href="#" th:href="@{/delet(id=${list.id})}" class="font">删除</a></td>
->>>>>>> c349cea9a47777c1a59d31e6df4718a2043355ba
             </tr>
-            </tbody>
-
-        </table>
-    </div>
-</div>
-
-
-
-
-<<<<<<< HEAD
+        </tbody>
     </table>
+<!--<h1>成绩录入</h1>-->
 
-=======
+<!--<div class="contact">-->
+
+    <!--<form action="/insert" method="post">-->
+        <!--项目:<input type="text" name="sportname"/><br/><br/>-->
+
+        <!--<h3>第一名</h3>姓名:<input type="text" name="studentname1"/><br/>-->
+        <!--成绩:<input type="text" name="studentgrade1"/><br/>-->
+        <!--<h3>第二名</h3>姓名:<input type="text" name="studentname2"/><br/>-->
+        <!--成绩:<input type="text" name="studentgrade2"/><br/>-->
+        <!--<h3>第三名</h3>姓名:<input type="text" name="studentname3"/><br/>-->
+        <!--成绩:<input type="text" name="studentgrade3"/><br/>-->
+        <!--<h3>第四名</h3>姓名:<input type="text" name="studentname4"/><br/>-->
+        <!--成绩:<input type="text" name="studentgrade4"/><br/>-->
+        <!--<h3>第五名</h3>姓名:<input type="text" name="studentname5"/><br/>-->
+        <!--成绩:<input type="text" name="studentgrade5"/><br/>-->
+        <!--<h3>第六名</h3>姓名:<input type="text" name="studentname6"/><br/>-->
+        <!--成绩:<input type="text" name="studentgrade6"/><br/>-->
+        <!--<h3>第七名</h3>姓名:<input type="text" name="studentname7"/><br/>-->
+        <!--成绩:<input type="text" name="studentgrade7"/><br/>-->
+        <!--<h3>第八名</h3>姓名:<input type="text" name="studentname8"/><br/>-->
+        <!--成绩:<input type="text" name="studentgrade8"/><br/>-->
+        <!--<input type="submit" value="提交"/>-->
+    <!--</form>-->
+    <!--<div align="center">-->
+        <!--<table>-->
+            <!--<thead>-->
+            <!--<th class="font">id</th>-->
+            <!--<th class="font">项目</th>-->
+            <!--<th class="font">删除</th>-->
+            <!--</thead>-->
+            <!--<tbody>-->
+            <!--<tr th:each="list:${lists}" class="font">-->
+                <!--<td th:text="${list.id}" class="font">01</td>-->
+                <!--<td th:text="${list.sportname}" class="font">800</td>-->
+                <!--<td><a href="#" th:href="@{/delet(id=${list.id})}" class="font">删除</a></td>-->
+            <!--</tr>-->
+            <!--</tbody>-->
+
+        <!--</table>-->
+    <!--</div>-->
+<!--</div>-->
+
+
 <footer class="copyright">
     <p> Powered By<a href="http://yb.upc.edu.cn">易班发展中心 </a></p>
 </footer>
-<!--contact page end here-->
->>>>>>> c349cea9a47777c1a59d31e6df4718a2043355ba
 </body>
 </html>
