@@ -14,9 +14,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class ListController {
 
+    @Autowired
     private CompetitionDao competitionDao;
 
-    @RequestMapping({"/list"})
+    @RequestMapping("/list")
     public String listDate(Model model){
 
 
