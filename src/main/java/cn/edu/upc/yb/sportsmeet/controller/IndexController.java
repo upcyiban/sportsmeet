@@ -12,16 +12,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 public class IndexController {
-   @Autowired
-   private CompetitionDao competitionDao;
+    @Autowired
+    private CompetitionDao competitionDao;
 
-
-    public String IndexController(){
+    @RequestMapping({"/"})
+    public String IndexController() {
         return "index";
     }
-
-
-
 
 
 }
