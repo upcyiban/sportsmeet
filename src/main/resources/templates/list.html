@@ -5,7 +5,16 @@
     <title>运动会成绩</title>
 </head>
 <body>
-<ul >
+<ul th:each="list:{$list}">
+    <h2><span th:text="${list.sportname}"></span></h2>
+    <li><span th:text="${list.studentname1}"></span> <span th:text="${list.studentgrade1}"></span></li>
+    <li><span th:text="${list.studentname2}"></span> <span th:text="${list.studentgrade2}"></span></li>
+    <li><span th:text="${list.studentname3}"></span> <span th:text="${list.studentgrade3}"></span></li>
+    <li><span th:text="${list.studentname4}"></span> <span th:text="${list.studentgrade4}"></span></li>
+    <li><span th:text="${list.studentname5}"></span> <span th:text="${list.studentgrade5}"></span></li>
+    <li><span th:text="${list.studentname6}"></span> <span th:text="${list.studentgrade6}"></span></li>
+    <li><span th:text="${list.studentname7}"></span> <span th:text="${list.studentgrade7}"></span></li>
+    <li><span th:text="${list.studentname8}"></span> <span th:text="${list.studentgrade8}"></span></li>
 
 </ul>
 
