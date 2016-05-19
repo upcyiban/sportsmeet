@@ -18,7 +18,6 @@ public class ListController {
 
     @RequestMapping("/list")
     public String list(Model model){
-
         Iterable<Competition> competitions=competitionDao.findAll(sortById());
         model.addAttribute("lists",competitions);
         return "list";
@@ -27,6 +26,14 @@ public class ListController {
 
     private Sort sortById(){
         return new Sort(Sort.Direction.DESC,"id");
+    }
+    @RequestMapping("/showlist")
+    public String showList(int id,Model model){
+        Competition competition = competitionDao.findOne(id);
+        model.addAttribute("lists",competition);
+        return "showlist";
+
+
     }
 
 
