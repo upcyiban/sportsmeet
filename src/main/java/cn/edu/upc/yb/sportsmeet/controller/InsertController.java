@@ -3,6 +3,7 @@ package cn.edu.upc.yb.sportsmeet.controller;
 import cn.edu.upc.yb.sportsmeet.model.Competition;
 import cn.edu.upc.yb.sportsmeet.model.CompetitionDao;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,7 +19,7 @@ public class InsertController {
 
     @RequestMapping("/insertadmin")
     public String showInertadin(Model model) {
-        Iterable<Competition> competitions = competitionDao.findAll();
+        Iterable<Competition> competitions=competitionDao.findAll(sortById());
         model.addAttribute("lists",competitions);
         return "insertadmin";
     }
@@ -29,5 +30,10 @@ public class InsertController {
         competitionDao.save(competition);
 
         return "insertsuccess";
+    }
+
+
+    private Sort sortById(){
+        return new Sort(Sort.Direction.DESC,"id");
     }
 }

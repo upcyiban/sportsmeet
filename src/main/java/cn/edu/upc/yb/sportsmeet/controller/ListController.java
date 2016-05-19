@@ -4,6 +4,7 @@ import antlr.ASTNULLType;
 import cn.edu.upc.yb.sportsmeet.model.Competition;
 import cn.edu.upc.yb.sportsmeet.model.CompetitionDao;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,13 +19,15 @@ public class ListController {
     @RequestMapping("/list")
     public String list(Model model){
 
-
-
-        Iterable<Competition> competitions=competitionDao.findAll();
-
+        Iterable<Competition> competitions=competitionDao.findAll(sortById());
         model.addAttribute("lists",competitions);
-
         return "list";
 
     }
+
+    private Sort sortById(){
+        return new Sort(Sort.Direction.DESC,"id");
+    }
+
+
 }
