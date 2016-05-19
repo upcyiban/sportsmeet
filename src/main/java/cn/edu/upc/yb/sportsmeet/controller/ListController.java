@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * Created by 易班技术开发部 on 2016/5/18.
  */
 @Controller
-public class IistController {
+public class ListController {
 
     private CompetitionDao competitionDao;
 
