@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
     <title>Title</title>
@@ -25,7 +25,21 @@
     姓名:<input type="text" name="studentname8"/><br/>
     成绩:<input type="text" name="studentgrade8"/><br/>
     <button>插入</button>
+    <table>
+        <thead>
+        <th>id</th>
+        <th>项目</th>
+        <th>删除</th>
+        </thead>
+        <tbody>
+        <tr th:each="list:${lists}">
+            <td th:text="${list.id}">01</td>
+            <td th:text="${list.sportname}">800</td>
+            <td><a href="#" th:href="@{/delet(id=${list.id})}">删除</a></td>
+        </tr>
+        </tbody>
 
+    </table>
 </form>
 </body>
 </html>
