@@ -9,8 +9,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * Created by 易班技术开发部 on 2016/5/18.
- */
+ * Created by 易班技术开发部 on 2016/
+ */5/18.
 @Controller
 public class ListController {
 
