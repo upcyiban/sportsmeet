@@ -24,7 +24,7 @@ public class ListController {
 
         Iterable<Competition> competitions=competitionDao.findAll();
 
-        model.addAttribute("list",competitions);
+        model.addAttribute("lists",competitions);
 
         return "list";
 
