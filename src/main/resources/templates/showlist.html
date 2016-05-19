@@ -25,9 +25,9 @@
         <p class="lead">2016.05</p>
     </div>
     <div class="table-responsive">
-        <table class="table">
+        <table class="table" th:each="list:${lists}">
             <thead class="table-striped">
-            <tr th:each="list:${lists}">
+            <tr>
                 <td class="lead">项目名称：</td>
                 <td th:text="${list.sportname}">800米</td>
             </tr>
@@ -37,35 +37,35 @@
                 <td>姓名</td>
                 <td>成绩</td>
             </tr>
-            <tr style="font-family: Courier;font-size: medium" th:each="list:${lists}">
+            <tr style="font-family: Courier;font-size: medium">
                 <td th:text="${list.studentname1}">姓名</td>
                 <td th:text="${list.studentgrade1}">成绩</td>
             </tr>
-            <tr style="font-family: Courier;font-size: medium" th:each="list:${lists}">
+            <tr style="font-family: Courier;font-size: medium">
                 <td th:text="${list.studentname2}">姓名</td>
                 <td th:text="${list.studentgrade2}">成绩</td>
             </tr>
-            <tr style="font-family: Courier;font-size: medium" th:each="list:${lists}">
+            <tr style="font-family: Courier;font-size: medium">
                 <td th:text="${list.studentname3}">姓名</td>
                 <td th:text="${list.studentgrade3}">成绩</td>
             </tr>
-            <tr style="font-family: Courier;font-size: medium" th:each="list:${lists}">
+            <tr style="font-family: Courier;font-size: medium">
                 <td th:text="${list.studentname4}">姓名</td>
                 <td th:text="${list.studentgrade4}">成绩</td>
             </tr>
-            <tr style="font-family: Courier;font-size: medium" th:each="list:${lists}">
+            <tr style="font-family: Courier;font-size: medium">
                 <td th:text="${list.studentname5}">姓名</td>
                 <td th:text="${list.studentgrade5}">成绩</td>
             </tr>
-            <tr style="font-family: Courier;font-size: medium" th:each="list:${lists}">
+            <tr style="font-family: Courier;font-size: medium">
                 <td th:text="${list.studentname6}">姓名</td>
                 <td th:text="${list.studentgrade6}">成绩</td>
             </tr>
-            <tr style="font-family: Courier;font-size: medium" th:each="list:${lists}">
+            <tr style="font-family: Courier;font-size: medium">
                 <td th:text="${list.studentname7}">姓名</td>
                 <td th:text="${list.studentgrade7}">成绩</td>
             </tr>
-            <tr style="font-family: Courier;font-size: medium" th:each="list:${lists}">
+            <tr style="font-family: Courier;font-size: medium">
                 <td th:text="${list.studentname8}">姓名</td>
                 <td th:text="${list.studentgrade8}">成绩</td>
             </tr>
