@@ -16,7 +16,7 @@ public class ListController {
     @Autowired
     private CompetitionDao competitionDao;
 
-    @RequestMapping("/list")
+    @RequestMapping("/")
     public String list(Model model) {
         Iterable<Competition> competitions = competitionDao.findAll(sortById());
         model.addAttribute("lists", competitions);

@@ -47,7 +47,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <tbody>
             <tr th:each="list:${lists}">
                 <td th:text="${list.id}">01</td>
-                <td th:text="${list.sportname}">800</td>
+                <td th:text="${list.sportname}">800米</td>
                 <td><a href="#" th:href="@{/delet(id=${list.id})}">删除</a></td>
             </tr>
         </tbody>
